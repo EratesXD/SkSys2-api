@@ -1,9 +1,11 @@
 from flask import Flask, request
+from flask_cors import CORS
 import json
 import mysql.connector
 from mysql.connector import errorcode
 
 app = Flask('api')
+cors = CORS(app)
 
 get_todos_query = "SELECT * FROM test_todos"
 
@@ -31,7 +33,8 @@ create_todo_table = "CREATE TABLE IF NOT EXISTS test_todos(" \
 
 def connect_to_db():
     try:
-        cnc = mysql.connector.connect(user='web_user', password='supersecureweb', host='192.168.178.85', database='todo_db')
+        cnc = mysql.connector.connect(user='root', password='supersecureweb', host='localhost', 
+database='todo_db')
     except mysql.connector.Error as err:
         if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
             print("Something is wrong with your user name or password")
