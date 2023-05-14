@@ -6,7 +6,7 @@
 
 #### Post
 
-Erwartet ein json Objekt mit {"deadline": "<date>", "description": "<desc>", "percent_done": <pd>}.
+Erwartet ein json Objekt mit {"deadline": "\<date\>", "description": "\<desc\>", "percent_done": \<pd\>}.
 
 ```
 {
@@ -16,7 +16,7 @@ Erwartet ein json Objekt mit {"deadline": "<date>", "description": "<desc>", "pe
 }
 ```
 
-Wobei <date> ein Datum als String im Format yyyy-mm-dd ist, <desc> ein String mit unter 160 chars ist und <pd> eine Zahl zwischen 0 und 100.
+Wobei \<date\> ein Datum als String im Format yyyy-mm-dd ist, \<desc\> ein String mit unter 160 chars ist und \<pd\> eine Zahl zwischen 0 und 100.
 Es muss hierbei der Content-Type im Http Header auf application/json gesetzt werden.
 
 #### GET
