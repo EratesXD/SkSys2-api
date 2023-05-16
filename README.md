@@ -60,3 +60,8 @@ Updatet die im json übergebenen Werte im entsprechenden Todo, es reicht eine Te
 ```
 
 Es muss hierbei der Content-Type im Http Header auf application/json gesetzt werden.
+
+## How to run
+
+    pip install -r requirements.txt
+    flask run
